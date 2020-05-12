@@ -1,0 +1,247 @@
+body{
+
+  //text-align: center;
+  background: linear-gradient(to bottom, #3594DD, #4563DB, #5036D5, #5B16A9);
+  //background: linear-gradient(0.25turn, #3594DD, #4563DB, #5036D5);
+}
+
+.q-logo-container{
+  display: flex;
+  width: 98px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.col-of-logos{
+  height: 90px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+
+}
+
+.powered-by-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding-left: 20px;
+}
+
+.head-div{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  //background: #d9d8da;
+  //border-bottom: 2px solid #fff;
+  //height: 120px;
+  padding-left: 20px;
+  padding-right: 20px;
+  align-items: center;
+  padding-top: 30px;
+}
+
+.pow-text{
+
+    font-size: 12px;
+    color: white;
+    margin-bottom: 0px;
+}
+
+.q-logo{
+
+  height: 30px;
+}
+
+.top{
+  padding-right: 30px;
+}
+
+.next-button{
+  font-size: 25px;
+  border-radius: 16px;
+  width: 200px;
+  height: 50px;
+  border: none;
+  color: #fff;
+  font-weight: 300;
+  border: 1.5px solid #333;
+  //background: linear-gradient(0.25turn, #3594DD, #4563DB, #5036D5, #5B16A9);
+  background: #3594DD;
+  //border: 1px solid #fff;
+}
+
+.queue-title-text{
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  text-align: left;
+}
+
+.queue-title-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+  padding-left: 20px;
+}
+
+.one-detail{
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.column-icons{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100px;
+  justify-content: space-between;
+}
+
+.icons-details-block{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.queue-info{
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border: 3px solid #333;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 400px;
+  min-width: 300px;
+  height: 460px;
+  border-radius: 2%;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  background: #d9d8da;
+  align-items: center;
+}
+
+
+.current-text{
+  font-family: 'Roboto', sans-serif;
+  color: #333333;
+  font-size: 100px;
+  text-align: center;
+  margin-bottom: 0px;
+}
+
+.queue-analytics{
+  background: white;
+  padding-left: 10px;
+  padding-left: 10px;
+  padding-top: 30px;
+  margin-top: 30px;
+  padding-bottom: 50px;
+}
+
+.analytics-section-title{
+  color: #333;
+  text-align: center;
+}
+
+.queue-details{
+
+  margin-bottom: 30px;
+}
+
+.org-logo{
+  //width: 200px;
+  height: 50px;
+}
+
+.chart-row-1{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 50px;
+}
+
+.chart-container{
+  //margin-left: 5px;
+  margin-right: 5px;
+  //border: 2px solid #333;
+  margin-bottom: 25px;
+
+}
+
+.chart-container-container{
+  padding: 10px;
+  border: 1px solid #d5d5d5;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px 0;
+  border-radius: 6px;
+  margin-bottom: 25px;
+}
+
+.queue-details-text{
+  font-size: 20px;
+  font-weight: 300;
+  margin: 0;
+}
+
+.details-title{
+  font-weight: bold;
+}
+
+
+.num-stat{
+  font-size: 150px;
+  font-weight: 300;
+}
+
+#processed-green-text{
+  color: #29972a;
+}
+
+#pending-orange-text{
+  color: #fb9b01;
+}
+
+#late-red-text{
+  color: #f93727;
+}
+
+
+.num-stat-container{
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #333;
+  width: 400px;
+  border: 1px solid #d5d5d5;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px 0;
+  border-radius: 6px;
+  padding-top: 20px;
+  margin-bottom: 25px;
+}
+
+.num-stat-title-text{
+  font-size: 15px;
+}
+
+.service-text{
+  font-size: 30px;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+
+.fa-icon{
+  margin-right: 25px;
+  font-size: 17px;
+  color: #333;
+}
