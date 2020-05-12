@@ -1,13 +1,130 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <link rel="stylesheet" href="../css/styles.css">
+    <!--Load the AJAX API-->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-firestore.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-analytics.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+
+      // Load the Visualization API and the corechart package.
+      google.charts.load('current', {'packages':['corechart']});
+
+      // Set a callback to run when the Google Visualization API is loaded.
+      google.charts.setOnLoadCallback(drawChart);
+
+      // Callback that creates and populates a data table,
+      // instantiates the pie chart, passes in the data and
+      // draws it.
+      function drawChart() {
+
+        // Create the data table.
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Topping');
+        data.addColumn('number', 'Slices');
+        data.addRows([
+          ['< 5 minutes', 2],
+          ['6 -15 minutes', 3],
+          ['16-25 minutes', 1],
+          ['> 25 minutes', 1],
+        ]);
+
+        // Set chart options
+        var options = {'title':'Fulfillment time of tickets',
+                       'width':400,
+                       'height':300};
+
+        // Instantiate and draw our chart, passing in some options.
+        var chart1 = new google.visualization.PieChart(document.getElementById('chart_div1'));
+        var chart2 = new google.visualization.PieChart(document.getElementById('chart_div2'));
+        var chart3 = new google.visualization.PieChart(document.getElementById('chart_div3'));
+        chart1.draw(data, options);
+        chart2.draw(data, options);
+        chart3.draw(data, options);
+      }
+    </script>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/d927cee5b8.js" crossorigin="anonymous"></script>
+
     <meta charset="utf-8">
     <title>Queue Portal - Homepage</title>
   </head>
   <body>
-    <h1>Analytics</h1>
-    <p>Analytics go here</p>
+    <div class="head-div">
+      <div class="col-of-logos">
+        <img class="org-logo" src="images/nbdLogo.png" alt="">
+        <div class="q-logo-container">
+          <div class="powered-by-container">
+            <h3 class="pow-text">Powered</h3>
+            <h3 class="pow-text">by</h3>
+          </div>
+          <img class="q-logo" src="images/logowhite.png" alt="">
+      </div>
+      </div>
+    </div>
+    <div class="queue-info">
+      <h1 id="zatoona" class="current-text">A12</h1>
+      <h3 class="service-text">Teller</h3>
+      <div class="queue-details">
+        <div class="one-detail">
+          <i class="fa-icon fas fa-map-marker-alt"></i>
+          <h5 class="queue-details-text">Ibn Battuta Mall</h5>
+        </div>
+        <div class="one-detail">
+          <i class="fa-icon far fa-calendar-alt"></i>
+          <h5 class="queue-details-text">April 14th 2020</h5>
+        </div>
+        <div class="one-detail">
+          <i class="fa-icon far fa-clock"></i>
+          <h5 class="queue-details-text">Arrived: 13:01</h5>
+        </div>
+        <div class="one-detail">
+          <i class="fa-icon far fa-hourglass"></i>
+          <h5 class="queue-details-text">Elapsed: 00:03:01</h5>
+        </div>
+      </div>
+      <button id="loadButton" class="next-button" type="button" >Next Ticket</button>
+    </div>
+    <div class="queue-analytics">
+      <h1 class="analytics-section-title">Analytics & Insights</h1>
 
+      <div class="chart-row-1">
+        <div class="num-stat-container">
+          <h3 class="num-stat-title-text">Tickets processed today</h3>
+          <h1 id="processed-green-text" class="num-stat">221</h1>
+        </div>
+        <div class="num-stat-container">
+          <h3 class="num-stat-title-text">People in queue waiting for service</h3>
+          <h1 id="pending-orange-text" class="num-stat">13</h1>
+        </div>
+        <div class="num-stat-container">
+          <h3 class="num-stat-title-text">Tickets processed in longer than 15 minutes</h3>
+          <h1 id="late-red-text" class="num-stat">32</h1>
+        </div>
+      </div>
+      <div class="chart-row-1">
+        <div class="chart-container-container">
+          <div class="chart-container" id="chart_div1"></div>
+        </div>
+
+        <div class="chart-container-container">
+          <div class="chart-container" id="chart_div2"></div>
+        </div>
+
+        <div class="chart-container-container">
+          <div class="chart-container" id="chart_div3"></div>
+        </div>
+      </div>
+
+    </div>
+    <script src="javascript/app.js"></script>
   </body>
+
 </html>
