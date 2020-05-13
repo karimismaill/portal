@@ -41,6 +41,29 @@ getRealtimeUpdates = function(){
   })
 }
 
+loadButton.addEventListener("click", function(){
+
+  firestore.collection("/Organizations/Emirates NBD/Branches/MOE/Queue").doc("4").set({
+    status: "complete",
+  })
+  .then(function() {
+    console.log("Document successfully written!");
+  })
+  .catch(function(error) {
+    console.error("Error writing document: ", error);
+  });
+
+  /*docRef.where("status", "==", "serving").get().then(function(querySnapshot) {
+      querySnapshot.forEach(function(doc) {
+          doc.update({
+            status: "complete"
+            //email: email,
+            //profile_picture : imageUrl
+          })
+        })
+      });*/
+    })
+
 getRealtimeUpdates();
 
 
