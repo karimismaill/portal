@@ -45,6 +45,7 @@ loadButton.addEventListener("click", function(){
 
   firestore.collection("/Organizations/Emirates NBD/Branches/MOE/Queue").doc("4").set({
     status: "complete",
+    number: "4"
   })
   .then(function() {
     console.log("Document successfully written!");
