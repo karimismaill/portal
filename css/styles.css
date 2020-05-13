@@ -12,6 +12,7 @@ body{
   justify-content: space-between;
 }
 
+
 .col-of-logos{
   height: 90px;
   display: flex;
@@ -61,14 +62,17 @@ body{
 .next-button{
   font-size: 25px;
   border-radius: 16px;
-  width: 200px;
-  height: 50px;
-  border: none;
-  color: #fff;
+  //width: 200px;
+  //height: 50px;
+  //border: none;
+  color: #fff !important;
+  font-size: 24px;
+  padding: 10px 50px;
   font-weight: 300;
   border: 1.5px solid #333;
   //background: linear-gradient(0.25turn, #3594DD, #4563DB, #5036D5, #5B16A9);
   background: #3594DD;
+  cursor: pointer;
   //border: 1px solid #fff;
 }
 
